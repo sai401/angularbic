@@ -1,0 +1,148 @@
+<app-navbar></app-navbar>
+<p>test works!</p>
+
+<div class="container mb-2">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+
+<div class="container mb-2">
+    <h2 class="bg-primary">string interpolation</h2>
+    <h2>Welcome {{name}}</h2>
+    <h2>{{2+2}}</h2>
+    <h2>{{"Welcome " + name}}</h2>
+    <h2>{{name.length}}</h2>
+    <h2>{{name.toUpperCase()}}</h2>
+    <h2>{{greetUser()}}</h2>
+    <h2>{{url}}</h2>
+</div>
+<hr>
+<div class="container mb-2">
+    <h2 class="bg-primary">property binding</h2>
+    <input [id]="myId" bind-disabled="isDisabled" type="text" value="Vishwas">
+    <input id="{{myId}}" [disabled]="isDisabled" type="text" value="Vishwas">
+</div>
+<hr />
+<div class="container mb-2">
+    <h2 class="bg-primary">Class Binding Examples</h2>
+    <h2 class="text-success">Normal class binding</h2>
+    <h2 [class]="successClass">property class binding</h2>
+    <h2 class="text-special" [class]="successClass">class binding</h2>
+    <h2 [class.text-danger]="hasError">class binding</h2>
+    <h2 [ngClass]="messageClasses">Message</h2>
+</div>
+<hr>
+<div class="container mb-2">
+    <h2 class="bg-primary">Style Binding Examples</h2>
+    <h2 [style.color]="'orange'">Style Binding</h2>
+    <h2 [style.color]="hasError ? 'red' : 'green'">Style Binding 2</h2>
+    <h2 [style.color]="highlightColor">Style Binding 3</h2>
+    <h2 [ngStyle]="titleStyles">Style Binding 4</h2>
+
+</div>
+<hr>
+
+<div class="container mb-2">
+    <h2 class="bg-primary">Event Binding</h2>
+    <button class="mr-3" (click)="onClick($event)">Greet</button>
+    <button (click)="greeting = 'Welcome Vishwas'">Greet Vishwas</button>
+    <h2>{{greeting}}</h2>
+</div>
+<hr>
+<div class="container mb-3">
+    <h2 class="bg-primary">Template reference variables</h2>
+    <input #myInput type="text">
+    <button (click)="logMessage(myInput.value)">Log</button>
+</div>
+<hr>
+<div class="container mb-3">
+    <h2 class="bg-primary">Two-way binding</h2>
+    <input type="text" [(ngModel)]="name">
+    {{name}}
+</div>
+<hr>
+<div class="container mb-3">
+    <h2 class="bg-primary">Structural directives</h2>
+    <h2 *ngIf="displayName; else nameElseBlock">
+        Jhon Alen
+    </h2>
+    <ng-template #nameElseBlock>
+        <h2>
+            Name is hidden
+        </h2>
+    </ng-template>
+    <div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+    <ng-template #thenBlock>
+        <h2>Jhon Alen</h2>
+    </ng-template>
+    <ng-template #elseBlock>
+        <h2>Hidden</h2>
+    </ng-template>
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'red'">You picked red color</div>
+        <div *ngSwitchCase="'blue'">You picked blue color</div>
+        <div *ngSwitchCase="'green'">You picked green color</div>
+        <div *ngSwitchDefault>Pick again</div>
+    </div>
+    <div *ngFor="let color of colors; index as i">
+        <h2>{{i}} {{color}}</h2>
+    </div>
+</div>
+<div class="container mb-3">
+    <h2 class="bg-primary">Component Interaction</h2>
+    <h2>
+        {{"Hello " + parentName}}
+    </h2>
+    <button (click)=fireEvent()>Send Event</button>
+</div>
+<div class="container mb-3">
+    <h2 class="bg-primary">Pipes</h2>
+    <h2>{{"Jhon Alen" | lowercase}}</h2>
+    <h2>{{"Jhon Alen" | uppercase}}</h2>
+    <h2>{{"Welcome to Jhon Alen" | titlecase}}</h2>
+    <h2>{{"Jhon Alen" | slice:3:6}}</h2>
+    <h2>{{person | json}}</h2>
+    <h2>{{5.678 | number:'1.2-3'}}</h2>
+    <h2>{{5.678 | number:'3.4-5'}}</h2>
+    <h2>{{5.678 | number:'3.1-2'}}</h2>
+
+
+    <h2>{{0.25 | percent}}</h2>
+    <h2>{{0.25 | currency}}</h2>
+    <h2>{{0.25 | currency:'GBP'}}</h2>
+    <h2>{{0.25 | currency:'GBP':'code'}}</h2>
+
+    <h2>{{date}}</h2>
+    <h2>{{date | date:'short'}}</h2>
+    <h2>{{date | date:'shortDate'}}</h2>
+    <h2>{{date | date:'shortTime'}}</h2>
+</div>
