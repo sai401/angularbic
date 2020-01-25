@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+<!-- imp links -->
+https://medium.com/@oyewusioyekunle/how-to-add-bootstrap-to-your-angular-project-angular-8-6379fd6a0f46
+https://www.w3schools.com/bootstrap4/default.asp
+https://stackoverflow.com/questions/36320821/passing-multiple-route-params-in-angular2
