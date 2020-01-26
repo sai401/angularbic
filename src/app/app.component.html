@@ -1,11 +1,13 @@
 <!-- custom html tag binding -->
-
-<app-test [parentData]="title" (childEvent)="childDate = $event"></app-test>
+<!-- <app-test [parentData]="title" (childEvent)="childDate = $event"></app-test>
 <div class="container mb-3" *ngIf="childDate">
-    <h2 class="bg-primary">Child Data</h2>
-    <h2>{{childDate}}</h2>
-</div>
+  <h2 class="bg-primary">Child Data</h2>
+  <h2>{{ childDate }}</h2>
+</div> -->
 
+<!--The content below is only a placeholder and can be replaced.-->
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
 
 <!-- attribute binding -->
 <!-- <div app-test></div> -->

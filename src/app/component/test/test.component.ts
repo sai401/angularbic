@@ -6,10 +6,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
-  public name = "Jhon";
-  public url = window.location.href;
+  public name: string = "Jhon";
+  public url: string = window.location.href;
   public myId = "testId";
-  public isDisabled = true;
+  public isDisabled: boolean = true;
   public successClass = "text-success";
   public hasError = true;
   public isSpecial = true;
@@ -73,7 +73,7 @@ export class TestComponent implements OnInit {
 // selector: '[app-test]',
 
 
-// templateUrl: `
+// template: `
 // <div class="container">
 //   <h2>Card Header and Footer</h2>
 //   <div class="card">
