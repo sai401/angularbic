@@ -52,5 +52,12 @@ interacting with components
 routing
 template driven forms
 reactive forms
-services
+validations
+-->
+
+<!-- services
+data sharing to multiple components (with subject)
+observables
+deployment and setup for multiple env
+crud operations
 -->
