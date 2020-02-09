@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 @Component({
   selector: "app-test",
   templateUrl: "./test.component.html",
-  styleUrls: ['./test.component.scss']
+  styleUrls: ["./test.component.scss"]
 })
 export class TestComponent implements OnInit {
   public name: string = "Jhon";
@@ -17,73 +17,68 @@ export class TestComponent implements OnInit {
     "text-success": !this.hasError,
     "text-danger": this.hasError,
     "text-special": this.isSpecial
-  }
+  };
 
   public highlightColor = "orange";
   public titleStyles = {
     color: "blue",
     fontStyle: "italic"
-  }
+  };
 
   public greeting = "";
 
-  //directives section 
+  //directives section
   public displayName = false;
   public color = "red";
-  public colors = ["red", "blue", "green", "yellow"]
+  public colors = ["red", "blue", "green", "yellow"];
   //end
 
-  //components interaction 
-  @Input('parentData') public parentName;
+  //components interaction
+  @Input("parentData") public parentName;
   @Output() public childEvent = new EventEmitter<string>();
   public person = {
-    "firstName": "John",
-    "lastName": "Doe"
-  }
+    firstName: "John",
+    lastName: "Doe"
+  };
 
   public date = new Date();
   fireEvent() {
-    this.childEvent.emit('Hey Codevolution');
+    this.childEvent.emit("Hey Codevolution");
   }
 
   //end
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   greetUser() {
     return "Hello " + this.name;
   }
 
   onClick(event) {
-    console.log(event)
+    console.log(event);
     this.greeting = event.type;
   }
 
   logMessage(value) {
-    console.log(value)
+    console.log(value);
   }
 }
 
-
-
 // selector: ".app-test",
 // selector: '[app-test]',
-
 
 // template: `
 // <div class="container">
 //   <h2>Card Header and Footer</h2>
 //   <div class="card">
 //     <div class="card-header">Header</div>
-//     <div class="card-body">Content</div> 
+//     <div class="card-body">Content</div>
 //     <div class="card-footer">Footer</div>
 //   </div>
 // </div>
 // `,
-
 
 // styles: [
 //   `

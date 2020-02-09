@@ -74,7 +74,7 @@
 <div class="container mb-2">
   <h2 class="bg-primary">Event Binding</h2>
   <button class="mr-3" (click)="onClick($event)">Greet</button>
-  <button (click)="greeting = 'Welcome Vishwas'">Greet Vishwas</button>
+  <button (click)="greeting = 'Welcome Vishwas'; greeting1 = 'jhon'">Greet Vishwas</button>
   <h2>{{ greeting }}</h2>
 </div>
 <hr />
@@ -86,7 +86,7 @@
 <hr />
 <div class="container mb-3">
   <h2 class="bg-primary">Two-way binding</h2>
-  <input type="text" [(ngModel)]="name" />
+  <input type="text" [(ngModel)]="name"/>
   {{ name }}
 </div>
 <hr />
@@ -114,7 +114,7 @@
     <div *ngSwitchDefault>Pick again</div>
   </div>
   <div *ngFor="let color of colors; index as i">
-    <h2>{{ i }} {{ color }}</h2>
+    <h2> {{ color }}</h2>
   </div>
 </div>
 <div class="container mb-3">
@@ -131,7 +131,7 @@
   <h2>{{ "Welcome to Jhon Alen" | titlecase }}</h2>
   <h2>{{ "Jhon Alen" | slice: 3:6 }}</h2>
   <h2>{{ person | json }}</h2>
-  <h2>{{ 5.678 | number: "1.2-3" }}</h2>
+  <h2>{{ 5.671000 | number: "1.2-3" }}</h2>
   <h2>{{ 5.678 | number: "3.4-5" }}</h2>
   <h2>{{ 5.678 | number: "3.1-2" }}</h2>
 

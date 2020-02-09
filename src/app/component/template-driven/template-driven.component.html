@@ -4,7 +4,7 @@
   <form
     #userForm="ngForm"
     *ngIf="!submitted"
-    (ngSubmit)="onSubmit()"
+    (ngSubmit)="onSubmit(userForm)"
     novalidate
   >
     <div>{{ "form valid:" + userForm.form.valid }}</div>
@@ -35,6 +35,7 @@
         type="email"
         class="form-control"
         name="email"
+        required
         #email
         [(ngModel)]="userModel.email"
       />

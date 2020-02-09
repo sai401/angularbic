@@ -34,7 +34,9 @@ export class TemplateDrivenComponent implements OnInit {
     }
   }
 
-  onSubmit() {
+  onSubmit(formObj) {
+    debugger;
+    console.log(formObj);
     this.submitted = true;
     alert("Success!");
     // this._enrollmentService.enroll(this.userModel).subscribe(

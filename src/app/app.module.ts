@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TemplateDrivenComponent } from "./component/template-driven/template-driven.component";
 import { ReactiveFormComponent } from "./component/reactive-form/reactive-form.component";
 import { HttpClientModule } from "@angular/common/http";
+import { DemoComponent } from './component/demo/demo.component';
+import { ReactiveDemoComponent } from './component/reactive-demo/reactive-demo.component';
 declare var $: any;
 console.log(`jQuery version: ${$.fn.jquery}`);
 @NgModule({
@@ -17,7 +19,9 @@ console.log(`jQuery version: ${$.fn.jquery}`);
     TestComponent,
     NavbarComponent,
     TemplateDrivenComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    DemoComponent,
+    ReactiveDemoComponent
   ],
   imports: [
     BrowserModule,
